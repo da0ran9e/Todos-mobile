@@ -27,7 +27,8 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Builder(builder: (context) => LiquidSwipe(pages: pages)),
+      home: Builder(
+          builder: (context) => LiquidSwipe(initialPage: 1, pages: pages)),
     );
   }
 
