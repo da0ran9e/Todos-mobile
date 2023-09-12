@@ -173,7 +173,7 @@ class _FirstLoadScreenState extends State<FirstLoadScreen> {
         ),
       ),
       dotsContainerDecorator: const ShapeDecoration(
-        color: Colors.black87,
+        color: Color.fromARGB(221, 45, 255, 252),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
