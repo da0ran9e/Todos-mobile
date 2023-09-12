@@ -35,25 +35,40 @@ class _LoginPageState extends State<LoginPage>
         icons: [
           FluidNavBarIcon(
               svgPath: "assets/Login/home.svg",
-              backgroundColor: Color(0xFF4285F4),
+              backgroundColor: Color.fromARGB(255, 66, 255, 151),
               extras: {"label": "home"}),
           FluidNavBarIcon(
               icon: Icons.bookmark_border,
-              backgroundColor: Color(0xFFEC4134),
+              backgroundColor: Color.fromARGB(255, 52, 236, 73),
               extras: {"label": "bookmark"}),
           FluidNavBarIcon(
               svgPath: "assets/conference.svg",
-              backgroundColor: Color(0xFF34A950),
+              backgroundColor: Color.fromARGB(255, 109, 192, 255),
               extras: {"label": "conference"}),
         ],
-        style: FluidNavBarStyle(iconUnselectedForegroundColor: Colors.white),
-        scaleFactor: 1.5,
+        style: FluidNavBarStyle(
+            barBackgroundColor: Color.fromARGB(255, 99, 241, 212),
+            iconBackgroundColor: Color.fromARGB(255, 99, 241, 212),
+            iconSelectedForegroundColor: Color.fromARGB(255, 35, 0, 0),
+            iconUnselectedForegroundColor:
+                const Color.fromARGB(255, 255, 255, 255)),
+        scaleFactor: 2,
         defaultIndex: 1,
-        // itemBuilder: (icon, item) => Semantics(
-        //   label: icon.extras["label"],
-        //   child: item,
-        // ),
+        onChange: _handleNavigationChange,
       ),
     ));
+  }
+
+  void _handleNavigationChange(int index) {
+    setState(() {
+      switch (index) {
+        case 0:
+          break;
+        case 1:
+          break;
+        case 2:
+          break;
+      }
+    });
   }
 }
