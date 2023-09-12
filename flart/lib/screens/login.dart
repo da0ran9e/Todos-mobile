@@ -1,3 +1,4 @@
+import 'package:flart/components/login/initialPage.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -38,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen>
     ),
     Container(
       color: Colors.red[50],
+      child: LoginPage(),
     ),
     Container(
       color: Colors.blue,
