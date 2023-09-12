@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flart/screens/intro.dart';
+import 'package:flart/screens/login.dart';
 
 class MasterApp extends StatefulWidget {
   const MasterApp({super.key});
@@ -26,6 +27,6 @@ class _MasterAppState extends State<MasterApp>
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: IntroScreen());
+    return MaterialApp(home: LoginScreen());
   }
 }
