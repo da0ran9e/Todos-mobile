@@ -33,6 +33,7 @@ dependencies:
 
   liquid_swipe: ^3.1.0
   fluid_bottom_nav_bar: ^1.4.0
+  introduction_screen: ^3.1.11
 
 
   # The following adds the Cupertino Icons font to your application.

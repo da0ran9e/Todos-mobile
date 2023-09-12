@@ -1,3 +1,4 @@
+import 'package:flart/screens/firstload.dart';
 import 'package:flutter/material.dart';
 import 'package:flart/screens/intro.dart';
 import 'package:flart/screens/login.dart';
@@ -27,6 +28,6 @@ class _MasterAppState extends State<MasterApp>
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginScreen());
+    return MaterialApp(home: FirstLoadScreen());
   }
 }
