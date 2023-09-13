@@ -39,12 +39,12 @@ class _LoginPageState extends State<LoginPage>
               children: [
                 AccountWidget(
                     name: 'name',
-                    image: Image.file(File('assets/icons/image.png')),
+                    image: const AssetImage('assets/icons/image.png'),
                     size: const Size(150, 150),
                     color: Colors.yellow),
                 AccountWidget(
                     name: 'name',
-                    image: Image.file(File('assets/icons/image.png')),
+                    image: const AssetImage('assets/icons/image.png'),
                     size: const Size(150, 150),
                     color: Colors.red)
               ],

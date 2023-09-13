@@ -1,21 +1,24 @@
+import 'dart:io' as io;
+
 import 'package:flutter/material.dart';
 
 class AccountWidget extends StatelessWidget {
   final Size size;
   final String name;
-  final Image image;
-  final Color color;
+  final AssetImage? image;
+  final Color? color;
 
   const AccountWidget(
       {Key? key,
-      required this.name,
+      this.name = 'name',
       required this.image,
-      required this.size,
-      required this.color})
+      this.size = const Size(150, 150),
+      this.color = Colors.white})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    AssetImage assetImage = const AssetImage('assets/icons/image.png');
     return Container(
       decoration: BoxDecoration(color: color),
       width: (150 / 150) * size.width,
@@ -43,14 +46,15 @@ class AccountWidget extends StatelessWidget {
               width: (79 / 150) * size.width,
               height: (79 / 150) * size.height,
               decoration: const BoxDecoration(color: Color(0xFF939393)),
+              child: Image(image: assetImage),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 58,
             top: 117,
             child: Text(
-              'Name',
-              style: TextStyle(
+              name,
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 12,
                 fontFamily: 'Inter',
