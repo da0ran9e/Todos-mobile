@@ -28,29 +28,27 @@ class _LoginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AccountWidget(
-                    name: 'name',
-                    image: const AssetImage('assets/icons/image.png'),
-                    size: const Size(150, 150),
-                    color: Colors.yellow),
-                AccountWidget(
-                    name: 'name',
-                    image: const AssetImage('assets/icons/image.png'),
-                    size: const Size(150, 150),
-                    color: Colors.red)
-              ],
-            )
-          ],
-        ),
+    return const MaterialApp(
+      home: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AccountWidget(
+                  name: 'name',
+                  image: AssetImage('assets/icons/image.png'),
+                  size: Size(150, 150),
+                  color: Colors.yellow),
+              AccountWidget(
+                  name: 'name',
+                  image: AssetImage('assets/icons/image.png'),
+                  size: Size(150, 150),
+                  color: Colors.red)
+            ],
+          )
+        ],
       ),
     );
   }
