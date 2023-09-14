@@ -47,12 +47,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                           _visible = !_visible;
                                         });
                                       },
-                                      child: const AccountWidget(
+                                      child: AccountWidget(
                                           name: 'name',
-                                          image: AssetImage(
+                                          image: const AssetImage(
                                               'assets/icons/image.png'),
                                           size: Size(150, 150),
-                                          color: Colors.yellow),
+                                          color: Colors.yellow,
+                                          onPressed: () {
+                                            setState(() {
+                                              _visible = !_visible;
+                                            });
+                                          }),
                                     ),
                                   ),
                                 ],
@@ -71,25 +76,22 @@ class _LoginScreenState extends State<LoginScreen> {
                                       opacity: _visible ? 1 : 0,
                                       duration:
                                           const Duration(milliseconds: 2000),
-                                      child: const AccountWidget(
-                                          name: 'name',
-                                          image: AssetImage(
-                                              'assets/icons/image.png'),
-                                          size: Size(150, 150),
-                                          color: Colors.red),
+                                      child: AccountWidget(
+                                        name: 'name',
+                                        image: const AssetImage(
+                                            'assets/icons/image.png'),
+                                        size: const Size(150, 150),
+                                        color: Colors.red,
+                                        onPressed: () {
+                                          setState(() {
+                                            _visible = !_visible;
+                                          });
+                                        },
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            AnimatedOpacity(
-                              opacity: _visible ? 1 : 0,
-                              duration: const Duration(milliseconds: 500),
-                              child: const AccountWidget(
-                                  name: 'name',
-                                  image: AssetImage('assets/icons/image.png'),
-                                  size: Size(150, 150),
-                                  color: Colors.yellow),
                             ),
                           ],
                         )

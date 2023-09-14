@@ -18,37 +18,7 @@ class _InitialPageState extends State<InitialPage> {
   }
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedOpacity(
-                opacity: _visible ? 1 : 0,
-                duration: const Duration(milliseconds: 1000),
-                child: const AccountWidget(
-                    name: 'name',
-                    image: AssetImage('assets/icons/image.png'),
-                    size: Size(150, 150),
-                    color: Colors.yellow),
-              ),
-              AnimatedOpacity(
-                opacity: _visible ? 1 : 0,
-                duration: const Duration(milliseconds: 1000),
-                child: const AccountWidget(
-                    name: 'name',
-                    image: AssetImage('assets/icons/image.png'),
-                    size: Size(150, 150),
-                    color: Colors.red),
-              ),
-            ],
-          )
-        ],
-      ),
-    );
+    return Material();
   }
 
   void _trigger() {

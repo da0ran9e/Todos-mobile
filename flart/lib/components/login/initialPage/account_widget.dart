@@ -2,19 +2,21 @@ import 'dart:io' as io;
 
 import 'package:flutter/material.dart';
 
-class AccountWidget extends StatelessWidget {
+class AccountWidget extends FloatingActionButton {
   final Size size;
   final String name;
   final AssetImage? image;
   final Color? color;
 
-  const AccountWidget(
-      {Key? key,
-      this.name = 'name',
-      required this.image,
-      this.size = const Size(150, 150),
-      this.color = Colors.white})
-      : super(key: key);
+  AccountWidget({
+    Key? key,
+    this.name = 'name',
+    required this.image,
+    this.size = const Size(150, 150),
+    this.color = Colors.white,
+    required VoidCallback onPressed,
+    Color backgroundColor = const Color.fromARGB(0, 0, 0, 0),
+  }) : super(key: key, onPressed: onPressed, backgroundColor: backgroundColor);
 
   @override
   Widget build(BuildContext context) {
