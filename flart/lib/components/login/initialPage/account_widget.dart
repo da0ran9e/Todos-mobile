@@ -45,8 +45,8 @@ class AccountWidget extends FloatingActionButton {
             ),
           ),
           Positioned(
-            left: 35,
-            top: 20,
+            left: (35 / 150) * size.width,
+            top: (20 / 150) * size.height,
             child: Container(
               width: (79 / 150) * size.width,
               height: (79 / 150) * size.height,
@@ -65,8 +65,8 @@ class AccountWidget extends FloatingActionButton {
             ),
           ),
           Positioned(
-            left: 58,
-            top: 117,
+            left: (58 / 150) * size.width,
+            top: (117 / 150) * size.height,
             child: Text(
               name,
               style: const TextStyle(

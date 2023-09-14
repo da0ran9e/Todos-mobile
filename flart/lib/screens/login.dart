@@ -37,8 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: 200,
-                        height: 200,
+                        width: 150,
+                        height: 150,
                         child: Stack(
                           children: <Widget>[
                             AnimatedPositioned(
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 duration: const Duration(milliseconds: 2000),
                                 child: AccountWidget(
                                   name: 'name',
-                                  size: const Size(150, 150),
+                                  size: const Size(100, 100),
                                   color: Colors.yellow,
                                   onPressed: () {
                                     setState(() {
@@ -64,8 +64,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
-                        height: 200,
+                        width: 150,
+                        height: 150,
                         child: Stack(
                           children: <Widget>[
                             AnimatedPositioned(
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 duration: const Duration(milliseconds: 2000),
                                 child: AccountWidget(
                                   name: 'name',
-                                  size: const Size(150, 150),
+                                  size: const Size(100, 100),
                                   color: Colors.red,
                                   onPressed: () {
                                     setState(() {
@@ -96,8 +96,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: 200,
-                        height: 200,
+                        width: 150,
+                        height: 150,
                         child: Stack(
                           children: <Widget>[
                             AnimatedPositioned(
@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 duration: const Duration(milliseconds: 2000),
                                 child: AccountWidget(
                                   name: 'name',
-                                  size: const Size(150, 150),
+                                  size: const Size(100, 100),
                                   color: Colors.green,
                                   onPressed: () {
                                     setState(() {
@@ -123,8 +123,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
-                        height: 200,
+                        width: 150,
+                        height: 150,
                         child: Stack(
                           children: <Widget>[
                             AnimatedPositioned(
@@ -136,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 duration: const Duration(milliseconds: 2000),
                                 child: AccountWidget(
                                   name: 'name',
-                                  size: const Size(150, 150),
+                                  size: const Size(100, 100),
                                   color: Colors.blue,
                                   onPressed: () {
                                     setState(() {
