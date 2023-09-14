@@ -1,5 +1,6 @@
 import 'package:flart/components/login/initialPage.dart';
 import 'package:flart/components/login/initialPage/account_widget.dart';
+import 'package:flart/components/login/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -17,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Builder(builder: (context) {
-        Future.delayed(Duration(seconds: 1), () {
+        Future.delayed(const Duration(seconds: 1), () {
           setState(() {
             _visible = true;
           });
@@ -155,6 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Container(
               color: Colors.green,
+              child: LoginPageView(),
             ),
             Container(
               color: Colors.blue,
