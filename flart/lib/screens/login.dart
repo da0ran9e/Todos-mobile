@@ -32,14 +32,55 @@ class _LoginScreenState extends State<LoginScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            AnimatedOpacity(
-                              opacity: _visible ? 1 : 0,
-                              duration: const Duration(milliseconds: 500),
-                              child: const AccountWidget(
-                                  name: 'name',
-                                  image: AssetImage('assets/icons/image.png'),
-                                  size: Size(150, 150),
-                                  color: Colors.yellow),
+                            SizedBox(
+                              width: 200,
+                              height: 350,
+                              child: Stack(
+                                children: <Widget>[
+                                  AnimatedPositioned(
+                                    top: _visible ? 50.0 : 150.0,
+                                    duration: const Duration(seconds: 2),
+                                    curve: Curves.fastOutSlowIn,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          _visible = !_visible;
+                                        });
+                                      },
+                                      child: const AccountWidget(
+                                          name: 'name',
+                                          image: AssetImage(
+                                              'assets/icons/image.png'),
+                                          size: Size(150, 150),
+                                          color: Colors.yellow),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 200,
+                              height: 350,
+                              child: Stack(
+                                children: <Widget>[
+                                  AnimatedPositioned(
+                                    top: _visible ? 50.0 : 150.0,
+                                    duration: const Duration(seconds: 2),
+                                    curve: Curves.fastOutSlowIn,
+                                    child: AnimatedOpacity(
+                                      opacity: _visible ? 1 : 0,
+                                      duration:
+                                          const Duration(milliseconds: 2000),
+                                      child: const AccountWidget(
+                                          name: 'name',
+                                          image: AssetImage(
+                                              'assets/icons/image.png'),
+                                          size: Size(150, 150),
+                                          color: Colors.red),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             AnimatedOpacity(
                               opacity: _visible ? 1 : 0,
@@ -48,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   name: 'name',
                                   image: AssetImage('assets/icons/image.png'),
                                   size: Size(150, 150),
-                                  color: Colors.red),
+                                  color: Colors.yellow),
                             ),
                           ],
                         )

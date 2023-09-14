@@ -20,7 +20,7 @@ class AccountWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     AssetImage assetImage = const AssetImage('assets/icons/image.png');
     return Container(
-      decoration: BoxDecoration(color: color),
+      decoration: const BoxDecoration(color: Color.fromARGB(0, 1, 1, 1)),
       width: (150 / 150) * size.width,
       height: (150 / 150) * size.height,
       child: Stack(
@@ -32,7 +32,7 @@ class AccountWidget extends StatelessWidget {
               width: (150 / 150) * size.width,
               height: (150 / 150) * size.height,
               decoration: ShapeDecoration(
-                color: const Color(0xFFD9D9D9),
+                color: color,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -45,7 +45,8 @@ class AccountWidget extends StatelessWidget {
             child: Container(
               width: (79 / 150) * size.width,
               height: (79 / 150) * size.height,
-              decoration: const BoxDecoration(color: Color(0xFF939393)),
+              decoration:
+                  const BoxDecoration(color: Color.fromARGB(0, 1, 1, 1)),
               child: Image(image: assetImage),
             ),
           ),
