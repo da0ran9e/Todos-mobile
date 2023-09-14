@@ -20,7 +20,7 @@ class _FirstLoadScreenState extends State<FirstLoadScreen> {
 
   Widget _buildFullscreenImage() {
     return Image.asset(
-      'assets/fullscreen.jpg',
+      'assets/introduction/fullscreen.jpg',
       fit: BoxFit.cover,
       height: double.infinity,
       width: double.infinity,
@@ -29,7 +29,7 @@ class _FirstLoadScreenState extends State<FirstLoadScreen> {
   }
 
   Widget _buildImage(String assetName, [double width = 350]) {
-    return Image.asset('assets/$assetName', width: width);
+    return Image.asset('assets/introduction/$assetName', width: width);
   }
 
   @override
