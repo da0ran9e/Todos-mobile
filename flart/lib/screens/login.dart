@@ -42,8 +42,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: GestureDetector(
                                       child: AccountWidget(
                                           name: 'name',
-                                          image: const AssetImage(
-                                              'assets/icons/image.png'),
                                           size: Size(150, 150),
                                           color: Colors.yellow,
                                           onPressed: () {
@@ -71,8 +69,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                           const Duration(milliseconds: 2000),
                                       child: AccountWidget(
                                         name: 'name',
-                                        image: const AssetImage(
-                                            'assets/icons/image.png'),
                                         size: const Size(150, 150),
                                         color: Colors.red,
                                         onPressed: () {
@@ -103,10 +99,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: GestureDetector(
                                       child: AccountWidget(
                                           name: 'name',
-                                          image: const AssetImage(
-                                              'assets/icons/image.png'),
                                           size: Size(150, 150),
-                                          color: Colors.yellow,
+                                          color: Colors.green,
                                           onPressed: () {
                                             setState(() {
                                               _visible = !_visible;
@@ -132,10 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                           const Duration(milliseconds: 2000),
                                       child: AccountWidget(
                                         name: 'name',
-                                        image: const AssetImage(
-                                            'assets/icons/image.png'),
                                         size: const Size(150, 150),
-                                        color: Colors.red,
+                                        color: Colors.blue,
                                         onPressed: () {
                                           setState(() {
                                             _visible = !_visible;
