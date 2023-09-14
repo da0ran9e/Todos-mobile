@@ -15,24 +15,26 @@ class _VerifyScreenState extends State<VerifyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double mainWidth = MediaQuery.of(context).size.width;
+    double mainHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 13, right: 15),
+            padding: EdgeInsets.only(top: 12, right: 0),
             child: Image.asset(
               "assets/login_vectors/vector-3.png",
-              width: 428,
-              height: 457,
+              width: (428 / 457) * (mainHeight - 350),
+              height: mainHeight - 350,
             ),
           ),
           const SizedBox(
             height: 18,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               textDirection: TextDirection.ltr,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,10 +49,10 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 12,
                 ),
                 Container(
-                  width: 329,
+                  width: (329 / 428) * mainWidth,
                   height: 56,
                   decoration: BoxDecoration(
                     border:
@@ -67,12 +69,12 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 32,
+                  height: 12,
                 ),
                 ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                   child: SizedBox(
-                    width: 329,
+                    width: (329 / 428) * mainWidth,
                     height: 56,
                     child: ElevatedButton(
                       onPressed: () {},
@@ -134,7 +136,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   ],
                 ),
                 const SizedBox(
-                  height: 37,
+                  height: 12,
                 ),
               ],
             ),
