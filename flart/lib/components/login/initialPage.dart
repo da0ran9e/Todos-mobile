@@ -1,29 +1,25 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flart/components/login/initialPage/account_widget.dart';
+import 'package:rive/rive.dart';
 
-class InitialPage extends StatefulWidget {
-  const InitialPage({super.key, required this.visible});
-  final bool visible;
+class InitialBackground extends StatefulWidget {
+  const InitialBackground({super.key});
+
   @override
-  State<InitialPage> createState() => _InitialPageState(visible);
+  State<InitialBackground> createState() => _InitialBackgroundState();
 }
 
-class _InitialPageState extends State<InitialPage> {
-  bool _visible = true;
+class _InitialBackgroundState extends State<InitialBackground> {
+  PageController controller = PageController(initialPage: 0);
 
-  _InitialPageState(bool visible) {
-    _visible = visible;
-  }
   @override
   Widget build(BuildContext context) {
-    return Material();
-  }
-
-  void _trigger() {
-    setState(() {
-      _visible = !_visible;
-    });
+    return const Scaffold(
+      body: Center(
+        child: RiveAnimation.asset(
+          'assets/login_initial/pathfinder.riv',
+          fit: BoxFit.fitHeight,
+        ),
+      ),
+    );
   }
 }

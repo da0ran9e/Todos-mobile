@@ -17,17 +17,20 @@ class _VerifyScreenState extends State<VerifyScreen> {
   Widget build(BuildContext context) {
     double mainWidth = MediaQuery.of(context).size.width;
     double mainHeight = MediaQuery.of(context).size.height;
+    double vectorWidth = mainWidth - 50;
+    double vectorHeight = (457 / 428) * vectorWidth;
+
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromRGBO(46, 46, 46, 1),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 12, right: 0),
+            padding: const EdgeInsets.only(top: 12, right: 0),
             child: Image.asset(
               "assets/login_vectors/vector-3.png",
-              width: (428 / 457) * (mainHeight - 350),
-              height: mainHeight - 350,
+              width: vectorWidth,
+              height: vectorHeight,
             ),
           ),
           const SizedBox(
@@ -60,7 +63,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 60),
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
                     child: OtpForm(
                       callBack: (code) {
                         varifyCode = code;

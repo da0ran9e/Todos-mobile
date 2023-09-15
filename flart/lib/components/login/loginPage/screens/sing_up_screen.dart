@@ -16,8 +16,9 @@ class _SingUpScreenState extends State<SingUpScreen> {
   Widget build(BuildContext context) {
     double mainWidth = MediaQuery.of(context).size.width;
     double mainHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromRGBO(46, 46, 46, 1),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

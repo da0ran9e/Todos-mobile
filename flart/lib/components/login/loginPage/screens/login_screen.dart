@@ -15,18 +15,19 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     double mainWidth = MediaQuery.of(context).size.width;
     double mainHeight = MediaQuery.of(context).size.height;
+    double vectorWidth = mainWidth - 50;
+    double vectorHeight = (457 / 413) * vectorWidth;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromRGBO(46, 46, 46, 1),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(
-                left: mainWidth - (413 / 457) * (mainHeight - 350), top: 12),
+            padding: const EdgeInsets.only(left: 50, top: 12),
             child: Image.asset(
               "assets/login_vectors/vector-1.png",
-              width: (413 / 457) * (mainHeight - 350),
-              height: mainHeight - 350,
+              width: vectorWidth,
+              height: vectorHeight,
             ),
           ),
           Padding(
