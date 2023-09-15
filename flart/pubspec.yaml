@@ -39,6 +39,11 @@ dependencies:
   flutter_timer_countdown: ^1.0.5
   rive: ^0.11.11
 
+  line_icons: ^2.0.1
+  provider: ^6.0.5
+  calendar_date_picker2: ^0.4.0
+  intl: ^0.18.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

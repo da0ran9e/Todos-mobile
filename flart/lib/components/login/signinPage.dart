@@ -1,3 +1,4 @@
+import 'package:flart/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
@@ -13,6 +14,12 @@ class _ThirdBackgroundState extends State<ThirdBackground> {
   late StateMachineController _controller;
   late SMIInput<double>? input;
   double count = 0;
+  void _Logedin(context) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => const HomeScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +45,10 @@ class _ThirdBackgroundState extends State<ThirdBackground> {
                 height: MediaQuery.of(context).size.height - 100,
               ),
               FloatingActionButton(
-                onPressed: () => {input?.change(count += 10)},
+                onPressed: () => {
+                  input?.change(count += 10),
+                  if (input!.value > 100) (context) => {_Logedin(context)}
+                },
               )
             ],
           )
