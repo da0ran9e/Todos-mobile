@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/models/todo.dart';
-import 'package:todo_app/pages/todo.dart';
-import 'package:todo_app/providers/todo_provider.dart';
+import 'package:flart/addons/To-do-List-App/models/todo.dart';
+import 'package:flart/addons/To-do-List-App/pages/todo.dart';
+import 'package:flart/addons/To-do-List-App/providers/todo_provider.dart';
 
 class TodoTile extends StatefulWidget {
   final Todo todo;
@@ -79,19 +79,17 @@ class _TodoTileState extends State<TodoTile> {
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [ 
+              children: [
                 InkWell(
-                    onTap: () => provider.toggleToBeDeleted(todo),
-                    child: todo.toBeDeleted
-                        ? const Text("restore")
-                        : const Text(""),
-                  ),
-                  const Spacer(),
-                  Text(
-                    todo.category,
-                    style: const TextStyle(fontSize: 12, color: Colors.grey),
-                  ),
-                
+                  onTap: () => provider.toggleToBeDeleted(todo),
+                  child:
+                      todo.toBeDeleted ? const Text("restore") : const Text(""),
+                ),
+                const Spacer(),
+                Text(
+                  todo.category,
+                  style: const TextStyle(fontSize: 12, color: Colors.grey),
+                ),
               ],
             )
           ]),

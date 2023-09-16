@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:todo_app/pages/search_results.dart';
+import 'package:flart/addons/To-do-List-App/pages/search_results.dart';
 
 class SearchBar extends StatefulWidget {
   const SearchBar({super.key});

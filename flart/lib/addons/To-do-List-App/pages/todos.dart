@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/components/add_todo_modal_bottom_sheet.dart';
-import 'package:todo_app/components/search_bar.dart';
-import 'package:todo_app/components/todo_tile.dart';
-import 'package:todo_app/providers/todo_provider.dart';
+import 'package:flart/addons/To-do-List-App/components/add_todo_modal_bottom_sheet.dart';
+import 'package:flart/addons/To-do-List-App/components/search_bar.dart'
+    as SearchBar;
+import 'package:flart/addons/To-do-List-App/components/todo_tile.dart';
+import 'package:flart/addons/To-do-List-App/providers/todo_provider.dart';
 
 class TodosPage extends StatelessWidget {
   const TodosPage({super.key});
@@ -35,10 +36,13 @@ class TodosPage extends StatelessWidget {
         padding: const EdgeInsets.all(30),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            const Expanded(child: SearchBar()),
+            const Expanded(child: SearchBar.SearchBar()),
             IconButton(
               onPressed: () {},
-              icon: const Icon(LineIcons.horizontalSliders,color: Colors.black,),
+              icon: const Icon(
+                LineIcons.horizontalSliders,
+                color: Colors.black,
+              ),
             ),
           ]),
           Expanded(

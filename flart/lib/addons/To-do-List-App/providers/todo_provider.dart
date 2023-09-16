@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:todo_app/models/todo.dart';
+import 'package:flart/addons/To-do-List-App/models/todo.dart';
 
 class TodoProvider extends ChangeNotifier {
   String currentDate = DateFormat.yMMMd().format(DateTime.now());

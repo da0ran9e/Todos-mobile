@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/models/todo.dart';
-import 'package:todo_app/providers/todo_provider.dart';
-import 'package:todo_app/components/todo_tile.dart';
+import 'package:flart/addons/To-do-List-App/models/todo.dart';
+import 'package:flart/addons/To-do-List-App/providers/todo_provider.dart';
+import 'package:flart/addons/To-do-List-App/components/todo_tile.dart';
 
 class DeletedTodosPage extends StatelessWidget {
   const DeletedTodosPage({super.key});
@@ -13,8 +13,7 @@ class DeletedTodosPage extends StatelessWidget {
     final List<Todo> deletedTodos = provider.deletedTodos;
 
     return Visibility(
-      replacement:
-          const Center(child: Text("You have not deleted any tasks")),
+      replacement: const Center(child: Text("You have not deleted any tasks")),
       visible: deletedTodos.isNotEmpty,
       child: Padding(
         padding: const EdgeInsets.all(30),

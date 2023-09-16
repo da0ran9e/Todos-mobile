@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/components/add_category_modal_bottom_sheet.dart';
-import 'package:todo_app/components/delete_button.dart';
-import 'package:todo_app/providers/todo_provider.dart';
+import 'package:flart/addons/To-do-List-App/components/add_category_modal_bottom_sheet.dart';
+import 'package:flart/addons/To-do-List-App/components/delete_button.dart';
+import 'package:flart/addons/To-do-List-App/providers/todo_provider.dart';
 
 class CategoryBox extends StatefulWidget {
   const CategoryBox({super.key});

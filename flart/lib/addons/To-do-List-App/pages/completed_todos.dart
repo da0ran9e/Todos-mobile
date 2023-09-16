@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/components/todo_tile.dart';
-import 'package:todo_app/models/todo.dart';
-import 'package:todo_app/providers/todo_provider.dart';
+import 'package:flart/addons/To-do-List-App/components/todo_tile.dart';
+import 'package:flart/addons/To-do-List-App/models/todo.dart';
+import 'package:flart/addons/To-do-List-App/providers/todo_provider.dart';
 
 class CompletedTodosPage extends StatelessWidget {
   const CompletedTodosPage({super.key});

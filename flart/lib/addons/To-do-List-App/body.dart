@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/pages/completed_todos.dart';
-import 'package:todo_app/pages/deleted_todos.dart';
-import 'package:todo_app/pages/todos.dart';
+import 'package:flart/addons/To-do-List-App/pages/completed_todos.dart';
+import 'package:flart/addons/To-do-List-App/pages/deleted_todos.dart';
+import 'package:flart/addons/To-do-List-App/pages/todos.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});

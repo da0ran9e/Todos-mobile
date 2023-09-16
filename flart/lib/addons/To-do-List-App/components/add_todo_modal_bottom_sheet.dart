@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/pages/categories.dart';
-import 'package:todo_app/components/todo_property_row.dart';
-import 'package:todo_app/providers/todo_provider.dart';
+import 'package:flart/addons/To-do-List-App/pages/categories.dart';
+import 'package:flart/addons/To-do-List-App/components/todo_property_row.dart';
+import 'package:flart/addons/To-do-List-App/providers/todo_provider.dart';
 
 class AddTaskModalBottomSheet extends StatefulWidget {
   const AddTaskModalBottomSheet({super.key});
