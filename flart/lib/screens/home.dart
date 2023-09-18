@@ -1,3 +1,5 @@
+import 'package:flart/addons/To-do-List-App/body.dart';
+import 'package:flart/addons/To-do-List-App/pages/todos.dart';
 import 'package:flutter/material.dart';
 import 'package:flart/components/home/homeMain.dart';
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
@@ -22,6 +24,7 @@ class _HomeScreenState extends State {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
+      body: Body(),
       backgroundColor: Color.fromARGB(148, 98, 172, 218),
       bottomNavigationBar: FluidNavBar(
         icons: [

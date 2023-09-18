@@ -2,6 +2,7 @@ import 'package:flart/components/login/initialPage.dart';
 import 'package:flart/components/login/initialPage/account_widget.dart';
 import 'package:flart/components/login/loginPage.dart';
 import 'package:flart/components/login/signinPage.dart';
+import 'package:flart/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -59,9 +60,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                     size: const Size(75, 75),
                                     color: Colors.yellow,
                                     onPressed: () {
-                                      setState(() {
-                                        _visible = !_visible;
-                                      });
+                                      Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(
+                                            builder: (_) => const HomeScreen()),
+                                      );
                                     },
                                   ),
                                 ),
@@ -86,9 +88,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                     size: const Size(75, 75),
                                     color: Colors.red,
                                     onPressed: () {
-                                      setState(() {
-                                        _visible = !_visible;
-                                      });
+                                      Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(
+                                            builder: (_) => const HomeScreen()),
+                                      );
                                     },
                                   ),
                                 ),
@@ -118,9 +121,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                     size: const Size(75, 75),
                                     color: Colors.green,
                                     onPressed: () {
-                                      setState(() {
-                                        _visible = !_visible;
-                                      });
+                                      Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(
+                                            builder: (_) => const HomeScreen()),
+                                      );
                                     },
                                   ),
                                 ),
@@ -145,9 +149,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                     size: const Size(75, 75),
                                     color: Colors.blue,
                                     onPressed: () {
-                                      setState(() {
-                                        _visible = !_visible;
-                                      });
+                                      Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(
+                                            builder: (_) => const HomeScreen()),
+                                      );
                                     },
                                   ),
                                 ),
@@ -156,7 +161,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ],
-                    )
+                    ),
+                    FloatingActionButton(
+                        onPressed: () => {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (_) => const HomeScreen()),
+                              )
+                            })
                   ],
                 ),
               ],

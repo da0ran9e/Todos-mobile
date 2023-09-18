@@ -20,51 +20,55 @@ class TodosPage extends StatelessWidget {
         )
         .toList();
 
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: primaryColor,
-        onPressed: () => showModalBottomSheet(
-          context: context,
-          builder: (BuildContext context) =>
-              Wrap(children: const [AddTaskModalBottomSheet()]),
+    return MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => TodoProvider())],
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: primaryColor,
+          onPressed: () => showModalBottomSheet(
+            context: context,
+            builder: (BuildContext context) =>
+                Wrap(children: const [AddTaskModalBottomSheet()]),
+          ),
+          child: const Icon(
+            LineIcons.plus,
+          ),
         ),
-        child: const Icon(
-          LineIcons.plus,
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(30),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            const Expanded(child: SearchBar.SearchBar()),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                LineIcons.horizontalSliders,
-                color: Colors.black,
+        body: Padding(
+          padding: const EdgeInsets.all(30),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              const Expanded(child: SearchBar.SearchBar()),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  LineIcons.horizontalSliders,
+                  color: Colors.black,
+                ),
+              ),
+            ]),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Visibility(
+                  visible: todos.isNotEmpty,
+                  replacement: const Center(
+                    child: Text(
+                      "You have no tasks",
+                      style: TextStyle(letterSpacing: 0.1),
+                    ),
+                  ),
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: todos.length,
+                      itemBuilder: (context, index) =>
+                          TodoTile(todo: todos[index])),
+                ),
               ),
             ),
           ]),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: Visibility(
-                visible: todos.isNotEmpty,
-                replacement: const Center(
-                  child: Text(
-                    "You have no tasks",
-                    style: TextStyle(letterSpacing: 0.1),
-                  ),
-                ),
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: todos.length,
-                    itemBuilder: (context, index) =>
-                        TodoTile(todo: todos[index])),
-              ),
-            ),
-          ),
-        ]),
+        ),
       ),
     );
   }
